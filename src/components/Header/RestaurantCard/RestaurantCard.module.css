@@ -1,0 +1,38 @@
+.allRestaurants {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.restaurantCardMain {
+  display: block;
+  width: 20%;
+  border-radius: 20px;
+  margin: 10px;
+  margin-trim: inline;
+  padding: 10px;
+  cursor: pointer;
+}
+.restaurantCardMain :hover {
+  border: 1px solid red;
+}
+.restaurantCardMain p {
+  margin: 0px;
+  padding: 0px;
+}
+.restaurantImg {
+  height: 200px;
+  width: 100%;
+  border-radius: 20px;
+}
+.restaurantTitle {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: sans-serif;
+}
+.restaurantSubtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: sans-serif;
+}
