@@ -4,8 +4,10 @@
   margin: 0px;
   padding: 0px;
   padding: 16px;
-  height: 20%;
+  height: 12%;
   width: 98%;
+  position: fixed;
+  top: 0px;
 }
 .headerLogo {
   width: 60px;
