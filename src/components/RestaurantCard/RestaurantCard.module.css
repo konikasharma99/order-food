@@ -22,6 +22,38 @@
   padding: 0px;
   color: #ffffff;
 }
+.searchBox {
+  display: flex;
+  border: 1px solid black;
+  background-color: #bebebe;
+  width: 20%;
+  height: 30px;
+  border-radius: 50px;
+  padding-left: 12px;
+  margin-left: 10%;
+  margin-top: 15px;
+}
+.searchInput {
+  border: 0px;
+  width: 90%;
+  height: 22px;
+  margin-top: 4px;
+  margin-right: 1%;
+  outline: none;
+  background-color: #bebebe;
+}
+.searchInput ::placeholder {
+  color: #0d0d0d;
+}
+.searchInput::-webkit-input-placeholder {
+  color: #0d0d0d;
+}
+.searchLogo {
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
 
 .restaurantCardMain {
   display: block;
