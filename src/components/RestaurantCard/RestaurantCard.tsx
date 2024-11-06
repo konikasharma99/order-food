@@ -1,6 +1,7 @@
 import styles from "./RestaurantCard.module.css";
 import { CDN_URL, SEARCH_BAR_LOGO } from "../../utils/common";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 interface IProps {
   cardProps: any;
 }
@@ -13,7 +14,6 @@ const RestaurantCard = (props: IProps) => {
     setRestaurants(restaurants.filter((e) => e.info.avgRatingString > 4.3));
   };
   const searchRestaurantList = () => {
-    console.log("**", searchRestaurant);
     setRestaurants(
       allRestaurants.filter((e) =>
         e.info.name.toLowerCase().includes(searchRestaurant.toLowerCase())
@@ -59,23 +59,29 @@ const RestaurantCard = (props: IProps) => {
       <div className={styles.allRestaurants}>
         {restaurants.map((cardObj: any) => {
           return (
-            <div key={cardObj.info.id} className={styles.restaurantCardMain}>
-              <img
-                className={styles.restaurantImg}
-                src={imgUrl + cardObj.info.cloudinaryImageId}
-              />
-              <p className={styles.restaurantTitle}>{cardObj.info.name}</p>
-              <p className={styles.restaurantSubtitle}>
-                {cardObj.info.cuisines.join(", ")}
-              </p>
-              <p className={styles.restaurantSubtitle}>
-                {cardObj.info.areaName}
-              </p>
-              <p className={styles.restaurantSubtitle}>
-                Rating : {cardObj.info.avgRatingString} ||{" "}
-                {cardObj.info.costForTwo}
-              </p>
-            </div>
+            <Link
+              to={`/restaurants/${cardObj.info.id}`}
+              key={cardObj.info.id}
+              className={styles.restaurantLink}
+            >
+              <div key={cardObj.info.id} className={styles.restaurantCardMain}>
+                <img
+                  className={styles.restaurantImg}
+                  src={imgUrl + cardObj.info.cloudinaryImageId}
+                />
+                <p className={styles.restaurantTitle}>{cardObj.info.name}</p>
+                <p className={styles.restaurantSubtitle}>
+                  {cardObj.info.cuisines.join(", ")}
+                </p>
+                <p className={styles.restaurantSubtitle}>
+                  {cardObj.info.areaName}
+                </p>
+                <p className={styles.restaurantSubtitle}>
+                  Rating : {cardObj.info.avgRatingString} ||{" "}
+                  {cardObj.info.costForTwo}
+                </p>
+              </div>
+            </Link>
           );
         })}
       </div>

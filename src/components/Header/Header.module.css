@@ -60,3 +60,7 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+.linkStyles {
+  text-decoration: none;
+}
