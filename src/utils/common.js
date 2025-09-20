@@ -7,3 +7,7 @@ export const SEARCH_BAR_LOGO =
 export const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 export const RESTAURANT_MENU_API =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=";
+export const RESTAURANT_MENU_API_END =
+  "&catalog_qa=undefined&submitAction=ENTER";
+
+//https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=1013619&catalog_qa=undefined&submitAction=ENTER
